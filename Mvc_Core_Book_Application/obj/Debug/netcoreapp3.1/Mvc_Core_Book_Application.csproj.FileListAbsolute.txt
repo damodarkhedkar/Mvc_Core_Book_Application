@@ -328,3 +328,4 @@ C:\Users\Admin\Desktop\Mvc_Core_Book_Application\Mvc_Core_Book_Application\obj\D
 C:\Users\Admin\Desktop\Mvc_Core_Book_Application\Mvc_Core_Book_Application\obj\Debug\netcoreapp3.1\Mvc_Core_Book_Application.csproj.CopyComplete
 C:\Users\Admin\Desktop\Mvc_Core_Book_Application\Mvc_Core_Book_Application\obj\Debug\netcoreapp3.1\Mvc_Core_Book_Application.dll
 C:\Users\Admin\Desktop\Mvc_Core_Book_Application\Mvc_Core_Book_Application\obj\Debug\netcoreapp3.1\Mvc_Core_Book_Application.pdb
+C:\Users\Admin\Desktop\Mvc_Core_Book_Application\Mvc_Core_Book_Application\obj\Debug\netcoreapp3.1\Razor\Views\Books\Publisher.cshtml.g.cs

@@ -50,6 +50,37 @@ namespace Mvc_Core_Book_Application.Controllers
             //return View(await _context.Books.ToListAsync());
         }
 
+
+        public async Task<IActionResult> Publisher(string bookpublisher, string searchstr)
+        {
+            IQueryable<string> publisherquery = from b in _context.Books
+                                              orderby b.Publisher
+                                              select b.Publisher;
+
+            var books = from b in _context.Books
+                        select b;
+
+            if (!String.IsNullOrEmpty(searchstr))
+            {
+                books = books.Where(b => b.Btitle.Contains(searchstr));
+            }
+
+            if (!String.IsNullOrEmpty(bookpublisher))
+            {
+                books = books.Where(x => x.Publisher == bookpublisher);
+            }
+            var bookCategoryVM = new BookPublisherViewModelcs
+            {
+                Publisher = new SelectList(await publisherquery.Distinct().ToListAsync()),
+                Books = await books.ToListAsync()
+
+            };
+
+            return View(bookCategoryVM);
+
+            //return View(await _context.Books.ToListAsync());
+        }
+
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -67,6 +98,7 @@ namespace Mvc_Core_Book_Application.Controllers
 
             return View(book);
         }
+
 
         // GET: Books/Create
         public IActionResult Create()
